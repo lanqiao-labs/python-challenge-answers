@@ -1,5 +1,5 @@
-print('开始下载'.center(62,'='))
+print('开始下载'.center(62, '='))
 print(f'{"50%":4}[{"="*30}{"."*30}]')
 print()
-print('下载完成'.center(62,'='))
+print('下载完成'.center(62, '='))
 print(f'{"100%":4}[{"="*60}]')
