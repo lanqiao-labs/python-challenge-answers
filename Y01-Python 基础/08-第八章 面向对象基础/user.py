@@ -1,5 +1,6 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 
+
 class User:
     ''' 该类用于创建用户账号
     '''
@@ -17,6 +18,7 @@ class User:
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
 
 def main():
     userList = []
@@ -54,6 +56,7 @@ def main():
 
         if choose == 3:
             break
+
 
 if __name__ == '__main__':
     main()

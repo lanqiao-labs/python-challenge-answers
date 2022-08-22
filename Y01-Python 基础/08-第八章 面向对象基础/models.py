@@ -1,5 +1,6 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 
+
 class Permission:
     '''用户身份类，每个用户在创建的时候都会有对应的身份和权限
     '''
@@ -37,6 +38,7 @@ class User:
     def change_role(self, role):
         self.role = role
 
+
 def main():
     # 创建一个普通用户，无需提供角色参数，使用默认值
     user1 = User('James', 'james@haha.com', '123456')
@@ -51,6 +53,7 @@ def main():
             # 不是管理员的话，使用前面定义的方法将其角色修改为管理员
             user.change_role(Permission.ROLE_ADMIN)
             print('修改后，{} 变成管理员'.format(user.name))
+
 
 if __name__ == '__main__':
     main()
