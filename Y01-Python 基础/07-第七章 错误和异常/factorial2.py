@@ -1,0 +1,16 @@
+def calculate():
+    x = input("请输入一个非负整数：")
+    try:
+        factorial = 1
+        x = int(x)
+        if x<0:
+            print("请输入非负整数。")
+        else:
+            for i in range(1,x+1):
+                factorial *= i
+            print(f"{x}的阶乘是:{factorial}")
+    except ValueError:
+        print("请输入非负整数。")
+
+if __name__ == "__main__":
+    calculate()
